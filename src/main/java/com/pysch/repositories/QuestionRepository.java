@@ -1,5 +1,7 @@
 package com.pysch.repositories;
 
+import java.util.Optional;
+
 import javax.validation.constraints.NotNull;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,6 +15,6 @@ import com.pysch.model.Question;
 public interface QuestionRepository extends JpaRepository<Question, Long> {
  
 	@Query(value = "",nativeQuery = true)
-	void getRandomQuestion(@NotNull GameMode gameMode);
+	Optional<Question> getRandomQuestion(@NotNull GameMode gameMode);
 
 }

@@ -23,13 +23,10 @@ public class Utils {
 	}
 
 	public static Question getRandomQuestion(@NotNull GameMode gameMode) {
-		// TODO Auto-generated method stub
-		questionRepository.getRandomQuestion(gameMode);
-		return null;
+		return questionRepository.getRandomQuestion(gameMode).get();
 	}
 
 	public static EllenAnswer getRandomEllenAnser(Question questions) {
-		// TODO Auto-generated method stub
 		ellenAnswerRepository.getRandomEllenAnswer(questions);
 		return null;
 	}
